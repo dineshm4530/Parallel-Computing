@@ -13,7 +13,7 @@ int main(int argc, char **argv)
     int n = atoi(argv[1]);
     bool flag=true;
     float t = 0.01;
-    float d,t2;
+    float diff,t2;
     
     float* a0=(float*) malloc(n*n*sizeof(float));
     float* a1=(float*) malloc(n*n*sizeof(float));
@@ -58,9 +58,9 @@ int main(int argc, char **argv)
             for(y=1;y<=n;y++)
             {
                 t1=x*n;
-                d=5.0;
+                diff=5.0;
                 t2 = a0[t1+y]+ a0[t1+y+1]+ a0[t1+y-1] + a0[t1+n+y] + a0[t1-n+y];
-                t2=t2/d;
+                t2=t2/diff;
                if(t<=fabs(t2-a0[t1+y]))
                 {
                     flag=true;
