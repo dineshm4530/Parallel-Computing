@@ -8,8 +8,8 @@ using namespace std;
 using namespace std::chrono;
 int main(int argc, char **argv)
 {
-    int x,y;
-    int t1,iter=0,nthds;
+    int x,y,iter=0;
+    int t1,nthds;
     int n = atoi(argv[1]);
     bool flag=true;
     float t = 0.01;
